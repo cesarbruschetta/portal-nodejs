@@ -1,5 +1,4 @@
-
-/**
+/*
  * Module dependencies.
  */
 
@@ -7,7 +6,25 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , mongo = require('mongodb')
+  , mongoose = require('mongoose')
+  , manager = require('mongoose-manager');
+
+
+/*
+ * Configuração do MongoDB
+ */
+
+var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://root:root@localhost:28017/nodejs'; 
+
+/*mongo.Db.connect(mongoUri, function (err, db) {
+  db.collection('mydocs', function(er, collection) {
+    collection.insert({'mykey': 'myvalue'}, {safe: true}, function(er,rs) {
+    });
+  });
+});
+*/
 
 var app = express();
 
@@ -29,6 +46,9 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+
+manager.start(mongoose, app);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
