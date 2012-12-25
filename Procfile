@@ -1,1 +1,1 @@
-web: geddy 
+web: geddy -p \$PORT
