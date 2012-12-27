@@ -1,4 +1,12 @@
+var passport = require('../helpers/passport')
+  , requireAuth = passport.requireAuth;
+
 var Paginas = function () {
+  this.before(requireAuth, {
+    except: ['show']
+  });
+	
+	
   this.respondsWith = ['html', 'json', 'xml', 'js', 'txt'];
 
   this.index = function (req, resp, params) {
