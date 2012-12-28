@@ -1,18 +1,18 @@
 <div class="control-group">
-  <label for="title" class="control-label">title</label>
+  <label for="title" class="control-label">Título</label>
   <div class="controls">
     <%- contentTag('input', pagina.title, {type:'text', class:'span6', name:'title'}) %>
   </div>
 </div>
 <div class="control-group">
-  <label for="description" class="control-label">description</label>
+  <label for="description" class="control-label">Descrição</label>
   <div class="controls">
     <%- contentTag('input', pagina.description, {type:'text', class:'span6', name:'description'}) %>
   </div>
 </div>
 <div class="control-group">
-  <label for="body" class="control-label">body</label>
+  <label for="body" class="control-label">Texto</label>
   <div class="controls">
-    <%- contentTag('input', pagina.body, {type:'text', class:'span6', name:'body'}) %>
+    <%- contentTag('textarea', pagina.body, {type:'text', class:'span6', name:'body', rows:'10'}) %>
   </div>
 </div>

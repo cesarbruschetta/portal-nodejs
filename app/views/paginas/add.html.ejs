@@ -1,7 +1,7 @@
 <div class="hero-unit">
   <form id="pagina-form" class="form-horizontal" action="/paginas" method="POST">
     <fieldset>
-      <legend>Create a new Pagina</legend>
+      <legend>Criar nova Página</legend>
       <% if(params.errors) { %>
       <div class="control-group">
         <ul>
@@ -15,7 +15,7 @@
       <%- partial('form', {pagina: {}}) %>
 
       <div class="form-actions">
-        <%- contentTag('input', 'Add', {type: 'submit', class: 'btn btn-primary'}) %>
+        <%- contentTag('input', 'Adicionar', {type: 'submit', class: 'btn btn-primary'}) %>
       </div>
     </fieldset>
   </form>
