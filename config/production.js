@@ -18,7 +18,7 @@
 
 var config = {
   detailedErrors: false
-, hostname: null
+, hostname: '0.0.0.0'
 , port: process.env.PORT || 4000
 , model: {
     defaultAdapter: 'mongo'
