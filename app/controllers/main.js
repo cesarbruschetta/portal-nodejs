@@ -24,16 +24,15 @@ var Main = function () {
     var self = this
       , Pagina = geddy.model.Pagina;
       
-      
     Pagina.all(function (err, data) {
       var params = {
         paginas: null
       };
+
       if (data) {
         params.paginas = data;
-      }
-      
-      
+      };
+
       self.respond(params, {
         format: 'html',
         layout: 'site'
@@ -43,20 +42,45 @@ var Main = function () {
   };
 
   this.login = function (req, resp, params) {
-    this.respond(params, {
-      format: 'html',
-      layout: 'site'
-    , template: 'app/views/main/login'
+    var self = this
+      , Pagina = geddy.model.Pagina;
+      
+    Pagina.all(function (err, data) {
+        var params = {
+        	paginas: null
+        };
+    	
+		if (data) {
+			params.paginas = data;
+		};
+
+	    self.respond(params, {
+	      format: 'html',
+	      layout: 'site'
+	    , template: 'app/views/main/login'
+	    });
     });
   };
 
   this.logout = function (req, resp, params) {
-    this.session.unset('userId');
-    this.session.unset('authType');
-    this.respond(params, {
-      format: 'html',
-      layout: 'site'
-    , template: 'app/views/main/logout'
+    var self = this
+      , Pagina = geddy.model.Pagina;
+
+    Pagina.all(function (err, data) {
+	    var params = {
+	        	paginas: null
+	        };    	
+		if (data) {
+			params.paginas = data;
+		};
+
+		self.session.unset('userId');
+	    self.session.unset('authType');
+	    self.respond(params, {
+	      format: 'html',
+	      layout: 'site'
+	    , template: 'app/views/main/logout'
+	    });
     });
   };
 

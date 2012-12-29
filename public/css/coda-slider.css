@@ -75,6 +75,7 @@
     width: 700px;
 	padding: 0;
 	overflow: hidden;
+	text-align: justify;
 }
 
 ul.navigation {

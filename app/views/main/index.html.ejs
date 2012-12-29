@@ -1,10 +1,14 @@
 <!-- Lets talk about geddy -->
 <div class="hero-unit geddy-welcome-box">
 	<% for (var i = 0, ii = paginas.length; i < ii; i++) { %>
-		<h1><%= paginas[i].title %></h1>
-		<h3><%= paginas[i].description %></h3>
-		<p><%= paginas[i].body %></p>
+      <div class="panel" id="<%= paginas[i].id %>">
+            <h1><%= paginas[i].title %></h1>
+            <div class="image_wrapper image_fl">
+            	<%= paginas[i].description %>
+            </div>
+            <p>
+            	<%= paginas[i].body %>
+            </p>
+      </div>
 	<% } %>
-	
-    zxcxzczc
 </div>

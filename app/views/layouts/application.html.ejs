@@ -27,6 +27,19 @@
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    
+    <script type="text/javascript">
+    	$(document).ready(function(){
+		    var url = window.location.pathname;
+		        
+	        $('.nav li').each(function(){
+	            if(url.indexOf($(this).find('a').attr('href')) == 0){
+	                $(this).addClass('active');
+	            };
+	        });
+		});
+	</script>
+    
   </head>
   <body>
     <div class="navbar navbar-fixed-top">
@@ -39,7 +52,7 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li><%- linkTo('Home', '/') %></li>
-              <li class="active"><%- linkTo('Admin', '/admin') %></li>
+              <li><%- linkTo('Admin', '/admin') %></li>
               <li><%- linkTo('Páginas', '/paginas') %></li>
               <li><%- linkTo('Usúarios', '/users') %></li>
               <li><%- linkTo('Sair', '/logout') %></li>

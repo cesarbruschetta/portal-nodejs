@@ -25,12 +25,12 @@ var config = {
   }
 , db: {
     mongo: {
-      username: null
-    , dbname: 'production'
+      username: 'root'
+    , dbname: 'app10362924'
     , prefix: null
-    , password: null
-    , host: 'localhost'
-    , port: 27017
+    , password: '45a78b'
+    , host: 'linus.mongohq.com'
+    , port: 10012
     }
   }
 
