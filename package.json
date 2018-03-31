@@ -6,9 +6,10 @@
     "start": "geddy "
   },
   "dependencies": {
-   	"geddy": "*",
-   	"geddy-passport":"0.0.18",
-   	"mongodb-wrapper":"*"
+    "express": "4.16.3",
+    "geddy": "*",
+    "geddy-passport": "0.0.18",
+    "mongodb-wrapper": "*"
   },
   "engines": {
     "node": "*",

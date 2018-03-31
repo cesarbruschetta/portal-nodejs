@@ -25,15 +25,13 @@ var config = {
     defaultAdapter: 'mongo'
   }
 , db: {
-    mongo: {
-      username: null
-    , dbname: 'nodejs'
+      username: 'heroku_frl31zsk'
+    , dbname: 'heroku_frl31zsk'
     , prefix: null
-    , password: null
-    , host: 'localhost'
-    , port: 27017
+    , password: 'heroku_frl31zsk'
+    , host: 'ds123929.mlab.com'
+    , port: 23929
     }
-  }  
 /*, model: {
     defaultAdapter: 'memory'
   }
