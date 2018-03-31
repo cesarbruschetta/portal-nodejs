@@ -25,12 +25,12 @@ var config = {
   }
 , db: {
     mongo: {
-      username: 'root'
-    , dbname: 'app10362924'
+      username: 'heroku_frl31zsk'
+    , dbname: 'heroku_frl31zsk'
     , prefix: null
-    , password: '45a78b'
-    , host: 'linus.mongohq.com'
-    , port: 10012
+    , password: 'heroku_frl31zsk'
+    , host: 'ds123929.mlab.com'
+    , port: 23929
     }
   }
 
