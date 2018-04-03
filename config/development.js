@@ -20,18 +20,19 @@ var config = {
   detailedErrors: true
 , debug: true
 , hostname: null //'localhost'
-, port: 4000
+, port: 8080
 , model: {
     defaultAdapter: 'mongo'
   }
 , db: {
+    mongo: {
       username: 'heroku_frl31zsk'
     , dbname: 'heroku_frl31zsk'
     , prefix: null
     , password: 'heroku_frl31zsk'
     , host: 'ds123929.mlab.com'
     , port: 23929
-    }
+    }}
 /*, model: {
     defaultAdapter: 'memory'
   }
