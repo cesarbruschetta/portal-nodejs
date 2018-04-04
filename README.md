@@ -1,4 +1,4 @@
 portal-nodejs
 =============
 
-Site utilizando a linguagem node.js e mongoDB
+Site utilizando a linguagem PHP e Google APP ENGINE
